@@ -14,4 +14,8 @@ services:
       dockerfile: php.dockerfile
     volumes:
       - ./src:/var/www/html:
-volumes:
+  database:
+    image: mysql:5.7
+    env_file:
+      - ./envfile/database.env
+ 
