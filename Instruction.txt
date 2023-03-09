@@ -1,0 +1,18 @@
+1. docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
+
+###
+Run above command to create a laravel application using composer and 
+then add enviroment variables in the env file for sql
+DB_DATABASE=[your name]
+DB_USERNAME=[your username]
+DB_PASSWORD=[your pass]
+
+2. docker-compose up -d server --build  
+
+#####
+Run the Second command to build nginx, php and my sql server
+
+3. docker compose run --rm artisan migrate
+
+####
+Run this command to test the database
